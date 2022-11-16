@@ -1,0 +1,58 @@
+﻿ @{
+	ViewData["Title"]="All Report";
+}
+@model IEnumerable<StudentProgressReportSystem.Models.Progress>
+<div class="row justify-content-md-center">
+	<div class="col-8">
+		<h3 class="text-center text-primary">All Report</h3>
+		<a class="btn btn-success" asp-action="create" asp-controller="Progress">Create Report</a>
+		@if(TempData["msg"] is not null)
+		{
+			<div class="alert alert-success">@TempData["msg"]</div>
+		}
+		@if(TempData["msg"] is not null)
+		{
+			<div class="alert alert-danger">@TempData["error"]</div>
+		}
+		<table class="table table-border">
+			<thead>
+				<th>Sno</th>
+				<th>Batch</th>
+				<th>Standard</th>
+				<th>Name</th>
+				<th>Symbol</th>
+				<th>Math</th>
+				<th>Science</th>
+				<th>Nepali</th>
+				<th>Computer</th>
+				
+				
+				
+			</thead>
+			<tbody>
+				@foreach(var p in Model)
+				{
+					<tr class="text-center">
+
+				<td>@p.Sno</td>
+				<td>@p.Batch</td>
+				
+				<td>@p.Name</td>
+				<td>@p.Symbol</td>
+				<td>@p.Math</td>
+				<td>@p.Science</td>
+				<td>@p.Nepali</td>
+				<td>@p.Computer</td>
+				
+
+					<td>
+						<a class="btn btn-primary" asp-controller="Progress" asp-action="Edit" asp-route-id="@p.Sno">Edit</a>
+						<a class="btn btn-danger" asp-controller="Progress" asp-action="Remove" asp-route-id="@p.Sno">Delete</a>
+					</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		
+	</div>
+</div>

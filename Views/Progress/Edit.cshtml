@@ -1,0 +1,67 @@
+﻿@{
+	ViewData["Title"]="Edit Student";
+}
+@model StudentProgressReportSystem.Models.Progress;
+<div class="row justify-content-md-center">
+	<div class="col-8">
+		<h3 class="text-center text-primary">Edit Student</h3>
+		@if(TempData["msg"] is not null)
+		{
+			<div class="alert alert-success">@TempData["msg"]</div>
+		}
+		@if(TempData["msg"] is not null)
+		{
+			<div class="alert alert-danger">@TempData["error"]</div>
+		}
+		<form method="post" asp-controller="Progress" asp-action="Edit">
+			<div class="mb-3">
+			<label asp-for="Sno" class="form-label"></label>
+			<input  class="form-control" asp-for="Sno">
+			<span class="text-danger" asp-validation-for="Sno"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Batch" class="form-label"></label>
+			<input  class="form-control" asp-for="Batch">
+			<span class="text-danger" asp-validation-for="Batch"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Name" class="form-label"></label>
+			<input  class="form-control" asp-for="Name">
+			<span class="text-danger" asp-validation-for="Name"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Symbol" class="form-label"></label>
+			<input  class="form-control" asp-for="Symbol">
+			<span class="text-danger" asp-validation-for="Symbol"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Math" class="form-label"></label>
+			<input  class="form-control" asp-for="Math">
+			<span class="text-danger" asp-validation-for="Math"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Science" class="form-label"></label>
+			<input  class="form-control" asp-for="Science">
+			<span class="text-danger" asp-validation-for="Science"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Social" class="form-label"></label>
+			<input  class="form-control" asp-for="Social">
+			<span class="text-danger" asp-validation-for="Social"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Nepali" class="form-label"></label>
+			<input  class="form-control" asp-for="Nepali">
+			<span class="text-danger" asp-validation-for="Nepali"></span>
+			</div>
+			<div class="mb-3">
+			<label asp-for="Computer" class="form-label"></label>
+			<input  class="form-control" asp-for="Computer">
+			<span class="text-danger" asp-validation-for="Computer"></span>
+			</div>
+			<hr/>
+			<button type="submit" class="btn btn-success">Save</button>
+		
+		</form>
+	</div>
+</div>

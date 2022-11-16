@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Blank.cshtml";
+    ViewData["Title"] = "SignUp";
+ }
+ 
+@*<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+        background-color: #690373;
+        height: 300px;
+        "></div>
+  <!-- Background image -->*@
+
+ <div class="hold-transition register-page"style=" text-align:center; background-image: url('https://2.bp.blogspot.com/-jvHg7Zv61GA/W8MrFPlkiMI/AAAAAAAACBQ/JTKBCUGKeA4nWlfonZZBCrAGCgKbXXuUwCEwYBhgL/s1600/School%2BAssembly2.jpg');height: 100vh">
+  <div class="register-box" >
+
+
+  <div class="card">
+        <div class="register-logo">
+    <a asp-controller="Home" asp-action="Index"><b>Student Progress Report System</b></a>
+  </div>
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Register a new membership</p>
+
+      <form action="#" method="post">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Full name">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Retype password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+              <label for="agreeTerms">
+               I agree to the <a href="#">terms</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+
+      <a asp-controller="Auth" asp-action="Login" class="text-center">I already have a membership</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+  </div>
+

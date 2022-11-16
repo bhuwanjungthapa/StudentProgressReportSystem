@@ -1,0 +1,87 @@
+﻿
+@{
+        Layout = "~/Views/Shared/_Dash.cshtml";
+        ViewData["Title"] = "Add student";
+}
+<section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Add Students</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-controller="Class" asp-action="List">See All List</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"> Class-1</h3>
+
+            </div>
+            <form action="#" method="post">
+                
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="title">Batch</label>
+                        <input type="number" name="batch" class="form-control" id="batch" placeholder="Enter Batch Number">
+           
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Symbol</label>
+                        <input type="number" name="symbol" class="form-control" id="symbol" placeholder="Symbol Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Name</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="name">
+                    </div>
+                     <label>Enter Marks for:</label>
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-2">
+                          <label for="math">Math</label>
+                          <input type="number" class="form-control" id="math" name="math">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="science">Science</label>
+                          <input type="number" class="form-control" id="science" name="science">
+                        </div>
+                         <div class="form-group col-md-2">
+                          <label for="social">Social</label>
+                          <input type="number" class="form-control" id="social" name="social">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="nepali">Nepali</label>
+                          <input type="number" class="form-control" id="nepali" name="nepali">
+                        </div>
+                         <div class="form-group col-md-2">
+                          <label for="computer">Computer</label>
+                          <input type="number" class="form-control" id="computer" name="computer">
+                        </div>
+                     </div>
+                    
+
+                </div>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-primary" asp-controller="Class" asp-action="List">
+                     <input type="reset" class="btn btn-primary">
+                </div>
+            </form>
+
+            <!-- /.card-body -->
+
+        </div>
+        <!-- /.card -->
+
+    </section>
